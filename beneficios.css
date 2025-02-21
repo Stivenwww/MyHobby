@@ -1,0 +1,152 @@
+/* Variables de colores basadas en Material Theme Builder */
+:root {
+    --primary-color: #000000;
+    --secondary-color: #03dac6;
+    --background-color: #eeeeee;
+    --text-color: #010101;
+    --accent-color: #ff0266;
+}
+
+/* Estilos generales */
+body {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-image: url('https://wallpapers.com/images/high/nba-pictures-nt3fu0yabe9rzfr5.webp');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    color: var(--text-color);
+    line-height: 1.6;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: 100vh;
+}
+
+/* Contenedor principal */
+.content {
+    max-width: 800px;
+    width: 90%;
+    margin: 40px auto;
+    padding: 20px;
+    background-color: rgba(255, 255, 255, 0.9);
+    border-radius: 10px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+}
+h1 {
+    font-size: 28px;
+    margin-top: 30px;
+    text-align: center;
+}
+
+/* Barra lateral */
+.sidebar {
+    width: 80px;
+    height: 100vh;
+    background: rgba(0, 0, 0, 0.8);
+    transition: width 0.3s ease-in-out;
+    position: fixed;
+    top: 0;
+    left: 0;
+    overflow: hidden;
+    border-radius: 0 20px 20px 0;
+    box-shadow: 5px 0 15px rgba(0, 0, 0, 0.3);
+    z-index: 1000;
+}
+
+.sidebar:hover {
+    width: 220px;
+}
+
+.sidebar ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.sidebar ul li {
+    padding: 15px;
+    transition: background 0.3s, transform 0.2s;
+    display: flex;
+    align-items: center;
+}
+
+.sidebar ul li:hover {
+    background: var(--secondary-color);
+    transform: scale(1.1);
+}
+
+.sidebar ul li a {
+    text-decoration: none;
+    color: white;
+    font-size: 18px;
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    white-space: nowrap;
+    padding: 10px;
+    width: 100%;
+}
+
+.sidebar ul li a span.text {
+    opacity: 0;
+    width: 0;
+    transition: opacity 0.3s ease-in-out 0.1s, width 0.3s ease-in-out 0.1s;
+}
+
+.sidebar:hover ul li a span.text {
+    opacity: 1;
+    width: auto;
+}
+
+.sidebar ul li span.icon {
+    font-size: 24px;
+    min-width: 40px;
+}
+
+/* Movimiento en el texto */
+h1, h2, p, ul li {
+    transition: transform 0.3s ease-out, color 0.3s ease-out;
+}
+
+h1:hover, h2:hover {
+    color: var(--accent-color);
+    transform: translateX(10px);
+}
+
+p:hover, ul li:hover {
+    transform: translateX(10px);
+}
+
+/* Pie de página */
+footer {
+    text-align: center;
+    padding: 20px;
+    background: rgba(0, 0, 0, 0.8);
+    color: white; /* Texto del footer en blanco */
+    margin-top: 40px;
+    border-radius: 10px;
+    width: 100%;
+}
+
+footer a {
+    color: var(--secondary-color); /* Color del enlace (correo electrónico) */
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+footer a:hover {
+    color: var(--accent-color); /* Cambiar a rojo al pasar el cursor */
+    text-decoration: underline;
+}
+
+/* Clase específica para el correo electrónico */
+footer a.email {
+    color: var(--secondary-color); /* Mantener el color original del correo */
+}
+
+footer a.email:hover {
+    color: var(--accent-color); /* Cambiar a rojo al pasar el cursor */
+}

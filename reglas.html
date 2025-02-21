@@ -4,119 +4,100 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Reglas del Baloncesto</title>
-    <meta name="description" content="Conoce las reglas básicas del baloncesto, incluyendo duración del juego, faltas y puntuación.">
+    <meta name="description" content="Conoce todas las reglas actuales del baloncesto, incluyendo duración del juego, faltas, violaciones y puntuación.">
     <link rel="icon" href="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRGTS1xtytfr4-ryoyDH6ET5Cn8bvfooVeh2g&s" type="image/x-icon">
+    <link rel="stylesheet" href="reglas.css">
     <style>
-        body {
-            font-family: Arial, sans-serif;
-            margin: 0;
-            padding-top: 50px;
-            text-align: center;
-            background-color: white;
-        }
-
-        nav {
-            background-color: #333;
-            padding: 10px;
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-        }
-
-        nav ul {
-            list-style-type: none;
-            margin: 0;
-            padding: 0;
-            text-align: center;
-        }
-
-        nav ul li {
-            display: inline;
-            margin: 15px;
-        }
-
-        nav ul li a {
-            text-decoration: none;
-            color: white;
-            font-size: 18px;
-        }
-
-        nav ul li a:hover {
-            color: #ffcc00;
-        }
-
-        .content {
-            width: 80%;
-            margin: auto;
-            text-align: left;
-            padding: 20px;
-        }
-
-        h1 {
-            text-align: center;
-            color: #333;
-        }
-
-        ul {
-            padding-left: 20px;
-        }
-
-        footer {
-            background-color: #333;
-            color: white;
-            padding: 10px;
-            text-align: center;
-            margin-top: 20px;
-        }
+        body { font-family: 'Poppins', sans-serif; }
     </style>
 </head>
 <body>
-
-    <nav>
-        <ul>
-            <li><a href="index.html">Inicio</a></li>
-            <li><a href="reglas.html">Reglas</a></li>
-            <li><a href="beneficios.html">Beneficios</a></li>
-            <li><a href="equipamiento.html">Equipamiento</a></li>
-            <li><a href="multimedia.html">Multimedia</a></li>
+    <nav class="sidebar">  <!-- Define la barra de navegación lateral con la clase sidebar -->
+        <ul>  <!-- Crea una lista desordenada para los elementos del menú -->
+            <li><a href="index.html"><span class="icon">🏠</span><span class="text">Inicio</span></a></li>  <!-- Elemento de menú para la página de inicio con icono y texto -->
+            <li><a href="reglas.html"><span class="icon">📜</span><span class="text">Reglas</span></a></li>  <!-- Enlace a la sección de reglas -->
+            <li><a href="beneficios.html"><span class="icon">💪</span><span class="text">Beneficios</span></a></li>  <!-- Enlace a la sección de beneficios -->
+            <li><a href="equipamiento.html"><span class="icon">🏀</span><span class="text">Equipamiento</span></a></li>  <!-- Enlace a equipamiento -->
+            <li><a href="multimedia.html"><span class="icon">🎥</span><span class="text">Multimedia</span></a></li>  <!-- Enlace a multimedia -->
         </ul>
     </nav>
 
-    <br><br>
-
     <div class="content">
-        <h1>Reglas Básicas del Baloncesto</h1>
-        <p>El baloncesto es un deporte dinámico con reglas claras que garantizan un juego justo y emocionante. Aquí algunas de las reglas más importantes:</p>
+        <h1>Reglas Completas del Baloncesto</h1>
+        <p>El baloncesto es un deporte con un conjunto de reglas detalladas que garantizan un juego justo y emocionante. A continuación, te presentamos todas las reglas actuales del baloncesto:</p>
 
-        <!--strong es para colocar negritaaa-->
+        <h2>1. Duración del Juego</h2>
         <ul>
+            <li><strong>Partidos profesionales:</strong> 4 cuartos de 12 minutos cada uno (NBA).</li>
+            <li><strong>Partidos FIBA:</strong> 4 cuartos de 10 minutos cada uno.</li>
+            <li><strong>Medio tiempo:</strong> Un descanso de 15 minutos después del segundo cuarto.</li>
+            <li><strong>Prorrogas:</strong> En caso de empate, se juegan períodos extras de 5 minutos hasta que haya un ganador.</li>
+        </ul>
 
-            <li><strong>Duración del juego:</strong> Cuatro cuartos de 10 o 12 minutos (dependiendo de la liga).</li>
-            <li><strong>Equipos:</strong> Cada equipo juega con 5 jugadores en la cancha.</li>
-            <li><strong>Driblar:</strong> Un jugador debe botar el balón mientras avanza, sin sostenerlo ni caminar.</li>
-            <li><strong>Tiempo de posesión:</strong> Un equipo tiene 24 segundos para intentar un tiro a canasta.</li>
-            <li><strong>Regla de los 3 segundos:</strong> Un jugador atacante no puede permanecer más de 3 segundos en la zona restringida del rival.</li>
-            <li><strong>Faltas:</strong> Contactos físicos excesivos o acciones antideportivas resultan en faltas personales.</li>
-            <li><strong>Lanzamiento de tiros libres:</strong> Se conceden tras faltas personales en ciertas condiciones.</li>
-            <li><strong>Puntuación:</strong>
-                <ul>
-                    <li><strong>2 puntos:</strong> Un tiro dentro del área.</li>
-                    <li><strong>3 puntos:</strong> Un tiro desde fuera del arco de tres puntos.</li>
-                    <li><strong>1 punto:</strong> Un tiro libre exitoso.</li>
-                </ul>
-            </li>
+        <h2>2. Jugadores y Sustituciones</h2>
+        <ul>
+            <li><strong>Jugadores en cancha:</strong> 5 por equipo.</li>
+            <li><strong>Banquillo:</strong> Hasta 7 jugadores suplentes (dependiendo de la liga).</li>
+            <li><strong>Sustituciones:</strong> Ilimitadas, pero solo se pueden realizar cuando el juego está detenido.</li>
+        </ul>
+
+        <h2>3. Puntuación</h2>
+        <ul>
+            <li><strong>2 puntos:</strong> Tiros dentro del arco de tres puntos.</li>
+            <li><strong>3 puntos:</strong> Tiros desde fuera del arco de tres puntos.</li>
+            <li><strong>1 punto:</strong> Tiros libres después de una falta.</li>
+        </ul>
+
+        <h2>4. Reglas de Tiempo</h2>
+        <ul>
+            <li><strong>24 segundos:</strong> Tiempo máximo para realizar un lanzamiento a canasta.</li>
+            <li><strong>8 segundos:</strong> Tiempo máximo para cruzar el balón al campo del oponente.</li>
+            <li><strong>5 segundos:</strong> Tiempo máximo para sacar o sostener el balón sin driblar.</li>
+            <li><strong>3 segundos:</strong> Un jugador atacante no puede permanecer más de 3 segundos en la zona restringida del rival.</li>
+        </ul>
+
+        <h2>5. Faltas y Sanciones</h2>
+        <ul>
+            <li><strong>Faltas personales:</strong> Contacto ilegal con un oponente (golpes, empujones, etc.).</li>
+            <li><strong>Faltas técnicas:</strong> Conducta antideportiva o violaciones administrativas.</li>
+            <li><strong>Faltas flagrantes:</strong> Contacto violento o peligroso.</li>
+            <li><strong>Tiros libres:</strong> Se otorgan después de ciertas faltas. El número de tiros depende de la situación.</li>
+            <li><strong>Límite de faltas:</strong> 5 faltas personales por jugador (6 en la NBA). Al superar este límite, el jugador es expulsado.</li>
+        </ul>
+
+        <h2>6. Violaciones</h2>
+        <ul>
+            <li><strong>Pasos:</strong> Moverse sin driblar el balón.</li>
+            <li><strong>Doble dribling:</strong> Volver a driblar después de agarrar el balón con ambas manos.</li>
+            <li><strong>Campo atrás:</strong> Pasar el balón al campo defensivo después de haber cruzado al campo ofensivo.</li>
+            <li><strong>Interferencia:</strong> Tocar el balón cuando está en trayectoria descendente hacia el aro o en el aro.</li>
+        </ul>
+
+        <h2>7. Árbitros y Sanciones</h2>
+        <ul>
+            <li><strong>Árbitros:</strong> 2 o 3 árbitros supervisan el partido.</li>
+            <li><strong>Revisión de video:</strong> En partidos profesionales, se puede usar video para revisar jugadas dudosas.</li>
+            <li><strong>Sanciones:</strong> Los jugadores pueden recibir amonestaciones, faltas técnicas o ser expulsados por conducta antideportiva.</li>
+        </ul>
+
+        <h2>8. Equipamiento y Cancha</h2>
+        <ul>
+            <li><strong>Cancha:</strong> Medidas oficiales de 28 metros de largo por 15 metros de ancho.</li>
+            <li><strong>Aro:</strong> Altura de 3.05 metros desde el suelo.</li>
+            <li><strong>Balón:</strong> Tamaño y peso varían según la categoría (juvenil, femenino, masculino).</li>
+        </ul>
+
+        <h2>9. Reglas Especiales</h2>
+        <ul>
+            <li><strong>Zona de defensa:</strong> En la NBA, se aplica la regla de los 3 segundos en defensa.</li>
+            <li><strong>Clear path foul:</strong> Falta intencional para detener un contraataque claro.</li>
+            <li><strong>Regla del cilindro:</strong> Un jugador tiene derecho al espacio vertical que ocupa su cuerpo.</li>
         </ul>
     </div>
 
-    <br>
-    <div style="height: 128px;"></div>
-
-
     <footer>
-        <p>Contáctanos en: StivenInfo@hobbybaloncesto.com</p>
-        <p>&copy; 2025 Hobby Baloncesto.</p>
+        <p>Contáctanos en: <a href="mailto:StivenInfo@hobbybaloncesto.com">StivenInfo@hobbybaloncesto.com</a></p>
+        <p>&copy; 2025 Hobby Baloncesto. Todos los derechos reservados.</p>
     </footer>
-
 </body>
 </html>

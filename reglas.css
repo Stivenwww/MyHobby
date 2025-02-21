@@ -1,0 +1,162 @@
+/* Variables de colores basadas en Material Theme Builder */
+:root {
+    --primary-color: #000000;
+    --secondary-color: #03dac6;
+    --background-color: #eeeeee;
+    --text-color: #010101;
+    --accent-color: #ff0266;
+}
+
+/* Estilos generales */
+body {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-image: url('https://wallpapers.com/images/high/nba-pictures-nt3fu0yabe9rzfr5.webp');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    color: var(--text-color);
+    line-height: 1.6;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: 100vh;
+}
+
+/* Contenedor principal */
+.content {
+    max-width: 800px;
+    width: 90%;
+    margin: 40px auto;
+    padding: 20px;
+    background-color: rgba(255, 255, 255, 0.9);
+    border-radius: 10px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+    font-size: 28px;
+    margin-top: 30px;
+    text-align: center;
+}
+
+/* ----------- Estilos de la Barra de Navegación (Sidebar) ----------- */
+
+/* Contenedor de la barra lateral */
+.sidebar {
+    width: 80px; /* Ancho inicial de la barra lateral */
+    height: 100vh; /* Ocupa toda la altura de la pantalla */
+    background: rgba(0, 0, 0, 0.8); /* Color de fondo con transparencia */
+    transition: width 0.3s ease-in-out; /* Suaviza la expansión de la barra */
+    position: fixed;
+    top: 0;
+    left: 0;
+    overflow: hidden; /* Oculta contenido que no cabe */
+    border-radius: 0 20px 20px 0; /* Bordes redondeados en el lado derecho */
+    box-shadow: 5px 0 15px rgba(0, 0, 0, 0.3); /* Sombra lateral */
+    z-index: 1000; /* Asegura que la barra esté por encima de otros elementos */
+}
+
+/* Expande la barra lateral al pasar el mouse */
+.sidebar:hover {
+    width: 220px; /* Expande la barra lateral cuando el usuario pasa el cursor */
+}
+
+/* Lista dentro de la barra lateral */
+.sidebar ul {
+    list-style: none; /* Elimina los estilos de viñetas */
+    padding: 0;
+    margin: 0;
+}
+
+/* Elementos de la lista */
+.sidebar ul li {
+    padding: 15px; /* Espaciado interno */
+    transition: background 0.3s, transform 0.2s; /* Transición de color y escala */
+    display: flex;
+    align-items: center;
+}
+
+/* Cambia el color y la escala al pasar el cursor sobre los elementos */
+.sidebar ul li:hover {
+    background: var(--secondary-color); /* Cambia el fondo al color secundario */
+    transform: scale(1.1); /* Aumenta el tamaño ligeramente */
+}
+
+/* Estilos de los enlaces dentro de la barra */
+.sidebar ul li a {
+    text-decoration: none; /* Elimina el subrayado */
+    color: white; /* Color del texto */
+    font-size: 18px; /* Tamaño de la fuente */
+    display: flex; /* Permite alinear iconos y texto */
+    align-items: center;
+    gap: 15px; /* Espaciado entre el icono y el texto */
+    white-space: nowrap; /* Evita que el texto se divida en varias líneas */
+    padding: 10px; /* Espaciado interno */
+    width: 100%; /* Ocupa todo el ancho disponible */
+}
+
+/* Efecto hover en los enlaces de la barra de navegación */
+.sidebar ul li a:hover {
+    color: var(--accent-color); /* Cambia el color del texto al pasar el mouse */
+    transform: scale(1.1); /* Aumenta ligeramente el tamaño */
+}
+
+/* ----------- Estilos adicionales para iconos y texto ----------- */
+
+/* Oculta el texto cuando la barra lateral está contraída */
+.sidebar ul li a span.text {
+    opacity: 0; /* Hace el texto invisible */
+    width: 0; /* Reduce su espacio a 0 */
+    transition: opacity 0.3s ease-in-out 0.1s, width 0.3s ease-in-out 0.1s; /* Agrega una animación suave */
+}
+
+/* Muestra el texto cuando la barra lateral se expande */
+.sidebar:hover ul li a span.text {
+    opacity: 1; /* Hace el texto visible */
+    width: auto; /* Permite que el texto ocupe su tamaño normal */
+}
+
+/* Tamaño de los iconos en la barra */
+.sidebar ul li span.icon {
+    font-size: 24px; /* Tamaño del icono */
+    min-width: 40px; /* Ancho mínimo del icono */
+}
+
+/* Movimiento en el texto */
+h1, h2, p, ul li {  /* Agrega transición al color y al movimiento */
+ transition: transform 0.3s ease-out, color 0.3s ease-out;
+}
+
+h1:hover, h2:hover {
+    color: var(--accent-color); /* Cambia el color del texto al hacer hover */
+    transform: translateX(10px); /* Desplaza ligeramente los títulos hacia la derecha */
+}
+
+p:hover, ul li:hover {
+    transform: translateX(10px);
+}
+
+/* Pie de página */
+footer {
+    text-align: center;
+    padding: 20px;
+    background: rgba(0, 0, 0, 0.8);
+    color: white;
+    margin-top: 40px;
+    border-radius: 10px;
+    width: 100%;
+}
+
+footer a {
+    color: var(--secondary-color);
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+footer a:hover {
+    text-decoration: underline;
+    color: var(--accent-color);
+}

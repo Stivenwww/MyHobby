@@ -1,0 +1,261 @@
+/* Variables de colores */
+:root {
+    --primary-color: #000000; /* Color de fondo principal (negro) para la barra de navegación */
+    --secondary-color: #03dac6; /* Color de realce para elementos interactivos */
+    --background-color: #222; /* Color de fondo de la página */
+    --text-color: rgb(1, 1, 1); /* Color del texto principal (negro) */
+    --accent-color: #ff0266; /* Color de énfasis para interacciones */
+}
+
+/* Estilos generales */
+body {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-image: url('https://wallpapers.com/images/high/nba-pictures-nt3fu0yabe9rzfr5.webp');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    color: var(--text-color);
+    line-height: 1.6;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: 100vh;
+    overflow: auto;
+}
+
+/* Contenedor principal */
+.content {
+    max-width: 800px;
+    width: 90%;
+    margin: 40px auto;
+    padding: 20px;
+    background-color: rgba(255, 255, 255, 0.9);
+    border-radius: 10px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+    text-align: left; /* Asegura que todo el contenido dentro esté alineado a la izquierda */
+}
+
+/* Barra lateral */
+.sidebar {
+    width: 80px;
+    height: 100vh;
+    background: rgba(0, 0, 0, 0.8);
+    transition: width 0.3s ease-in-out;
+    position: fixed;
+    top: 0;
+    left: 0;
+    overflow: hidden;
+    border-radius: 0 20px 20px 0;
+    box-shadow: 5px 0 15px rgba(0, 0, 0, 0.3);
+    z-index: 1000;
+}
+
+.sidebar:hover {
+    width: 220px;
+}
+
+.sidebar ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.sidebar ul li {
+    padding: 15px;
+    transition: background 0.3s, transform 0.2s;
+    display: flex;
+    align-items: center;
+}
+
+.sidebar ul li:hover {
+    background: var(--secondary-color);
+    transform: scale(1.1);
+}
+
+.sidebar ul li a {
+    text-decoration: none;
+    color: white;
+    font-size: 18px;
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    white-space: nowrap;
+    padding: 10px;
+    width: 100%;
+}
+
+.sidebar ul li a span.text {
+    opacity: 0;
+    width: 0;
+    transition: opacity 0.3s, width 0.3s;
+}
+
+.sidebar:hover ul li a span.text {
+    opacity: 1;
+    width: auto;
+}
+
+.sidebar ul li span.icon {
+    font-size: 24px;
+    min-width: 40px;
+}
+
+/* Contenido principal */
+main {
+    margin-left: 80px;
+    padding: 20px;
+}
+
+/* Títulos y texto */
+h1 {
+    font-size: 36px;
+    text-align: center;
+    color: var(--primary-color);
+    margin-bottom: 20px;
+    transition: color 0.3s, transform 0.3s;
+}
+
+h1:hover {
+    color: var(--accent-color);
+    transform: translateX(10px);
+}
+
+h2 {
+    font-size: 28px;
+    text-align: left; /* Asegura que los h2 estén alineados a la izquierda */
+    display: block;
+    width: 100%;
+    color: var(--primary-color);
+    margin-bottom: 20px;
+    transition: color 0.3s, transform 0.3s;
+}
+
+h2:hover {
+    color: var(--accent-color);
+    transform: translateX(10px);
+}
+
+p {
+    color: var(--text-color);
+    margin-bottom: 20px;
+    opacity: 1;
+    transform: translateY(0);
+    transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+
+p:hover {
+    transform: translateX(10px);
+}
+
+ul {
+    list-style-type: disc;
+    margin-left: 20px;
+    margin-bottom: 20px;
+}
+
+ul li {
+    color: var(--text-color);
+    margin-bottom: 10px;
+    transition: transform 0.3s;
+}
+
+ul li:hover {
+    transform: translateX(10px);
+}
+
+ul li strong {
+    color: var(--primary-color);
+}
+
+/* Pie de página */
+footer {
+    text-align: center;
+    padding: 20px;
+    background: rgba(0, 0, 0, 0.7);
+    color: rgb(255, 255, 255);
+    margin-top: 40px;
+    border-radius: 10px;
+    width: 100%;
+}
+
+footer a {
+    color: #03dac6;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+footer a.email {
+    color: var(--secondary-color) !important;
+}
+
+footer a:hover {
+    text-decoration: underline;
+    color: var(--accent-color);
+}
+
+.content p {
+    color: var(--text-color);
+}
+
+/* Responsividad */
+@media (max-width: 768px) {
+    .sidebar {
+        width: 60px;
+    }
+
+    .sidebar:hover {
+        width: 200px;
+    }
+
+    .content {
+        margin-left: 60px;
+        padding: 20px;
+        width: 85%;
+    }
+
+    .sidebar:hover ~ .content {
+        margin-left: 200px;
+    }
+
+    h1 {
+        font-size: 28px;
+    }
+
+    h2 {
+        font-size: 24px;
+    }
+
+    p, ul li {
+        font-size: 14px;
+    }
+}
+
+@media (max-width: 480px) {
+    .sidebar {
+        width: 0;
+    }
+
+    .sidebar:hover {
+        width: 200px;
+    }
+
+    .content {
+        margin-left: 0;
+        width: 100%;
+    }
+
+    h1 {
+        font-size: 24px;
+    }
+
+    h2 {
+        font-size: 20px;
+    }
+
+    p, ul li {
+        font-size: 12px;
+    }
+}

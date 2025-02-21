@@ -1,0 +1,249 @@
+/* Variables de colores basadas en Material Theme Builder */
+:root {
+    --primary-color: #000000; /* Color de fondo principal (negro) para la barra de navegación */
+    --secondary-color: #03dac6; /* Color de realce para elementos interactivos */
+    --background-color: #222; /* Color de fondo de la página */
+    --text-color: rgb(255, 255, 255); /* Color del texto principal (blanco) */
+    --accent-color: #ff0266; /* Color de énfasis para interacciones */
+}
+
+/* Estilos generales */
+body {
+    font-family: 'Poppins', sans-serif; /* Aplica la fuente principal al cuerpo del documento */
+    margin: 0; /* Elimina el margen predeterminado del body */
+    padding: 0; /* Elimina el relleno predeterminado del body */
+    background-color: var(--background-color); /* Usa una variable CSS para definir el color de fondo */
+    color: var(--text-color); /* Usa una variable CSS para definir el color del texto */
+    line-height: 1.6; /* Mejora la legibilidad del texto al aumentar la altura de línea */
+    display: flex; /* Establece el body como un contenedor flexible */
+    flex-direction: column; /* Organiza los elementos hijos en una columna */
+    align-items: center; /* Centra los elementos hijos horizontalmente */
+    min-height: 100vh; /* Asegura que el body ocupe al menos el 100% de la altura de la ventana */
+    overflow: hidden; /* Oculta cualquier contenido que se desborde del body */
+}
+
+
+/* Contenedor principal */
+.content {
+    max-width: 800px;
+    width: 90%;
+    margin: 40px auto;
+    padding: 20px;
+    background-color: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 0 15px rgba(238, 236, 236, 0.1);
+}
+h2 {
+    font-size: 28px;
+    margin-top: 30px;
+    text-align: center;
+}
+.sidebar {
+    width: 80px; /* Define el ancho inicial de la barra de navegación */
+    height: 100vh; /* Hace que la barra ocupe toda la altura de la ventana */
+    background: var(--primary-color); /* Asigna el color de fondo principal */
+    transition: width 0.3s ease-in-out; /* Agrega una transición suave al ancho */
+    position: fixed; /* Fija la barra en la posición izquierda */
+    top: 0; /* Ubicación en la parte superior */
+    left: 0; /* Anclado al lado izquierdo */
+    overflow: hidden; /* Oculta cualquier contenido que sobrepase los límites */
+    border-radius: 0 20px 20px 0; /* Redondea las esquinas derechas de la barra */
+    box-shadow: 5px 0 15px rgba(0, 0, 0, 0.3); /* Agrega una sombra lateral */
+    z-index: 1000; /* Asegura que la barra esté en primer plano */
+}
+
+.sidebar:hover {
+    width: 220px; /* Expande la barra al pasar el cursor */
+}
+
+.sidebar ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.sidebar ul li {
+    padding: 15px;
+    transition: background 0.3s, transform 0.2s;
+    display: flex;
+    align-items: center;
+}
+
+.sidebar ul li:hover {
+    background: var(--secondary-color);
+    transform: scale(1.1);
+}
+
+.sidebar ul li a {
+    text-decoration: none;
+    color: white;
+    font-size: 18px;
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    white-space: nowrap;
+    padding: 10px;
+    width: 100%;
+}
+
+.sidebar ul li a span.text {
+    opacity: 0;
+    width: 0;
+    transition: opacity 0.3s, width 0.3s;
+}
+
+.sidebar:hover ul li a span.text {
+    opacity: 1;
+    width: auto;
+}
+
+.sidebar ul li span.icon {
+    font-size: 24px;
+    min-width: 40px;
+}
+
+/* Contenido principal */
+main {
+    margin-left: 80px;
+    padding: 20px;
+}
+
+/* Imagen de fondo */
+.hero {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+    z-index: -1;
+}
+
+.gif-bg {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+/* Estilos para títulos y texto */
+h1, h2 {
+    color: var(--primary-color);
+    margin-bottom: 20px;
+    transition: color 0.3s;
+}
+
+h1:hover, h2:hover {
+    color: var(--accent-color);
+}
+
+h1 {
+    font-size: 36px;
+    text-align: center;
+}
+
+h2 {
+    font-size: 28px;
+    margin-top: 30px;
+}
+
+p {
+    color: var(--text-color);
+    margin-bottom: 20px;
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+
+p.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+ul {
+    list-style-type: disc;
+    margin-left: 20px;
+    margin-bottom: 20px;
+}
+
+ul li {
+    color: var(--text-color);
+    margin-bottom: 10px;
+}
+
+ul li strong {
+    color: var(--primary-color);
+}
+
+/* Efecto de rebote en imágenes */
+.gallery img {
+    transition: transform 0.5s cubic-bezier(.68,-0.55,.27,1.55);
+}
+
+.gallery img:hover {
+    transform: scale(1.1);
+}
+
+/* Efecto hover en multimedia */
+.videos iframe {
+    transition: transform 0.3s ease-in-out;
+}
+
+.videos iframe:hover {
+    transform: scale(1.05);
+}
+
+/* Pie de página */
+footer {
+    text-align: center;
+    padding: 20px;
+    background: rgba(0, 0, 0, 0.8);
+    color: white;
+    margin-top: 40px;
+    border-radius: 10px;
+    width: 100%;
+}
+
+footer a {
+    color: var(--primary-color);
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+footer a:hover {
+    text-decoration: underline;
+    color: var(--accent-color);
+}
+
+/* Responsividad */
+@media (max-width: 768px) {
+    .sidebar {
+        width: 60px;
+    }
+
+    .sidebar:hover {
+        width: 200px;
+    }
+
+    .content {
+        margin-left: 60px;
+        padding: 20px;
+        width: 85%;
+    }
+
+    .sidebar:hover ~ .content {
+        margin-left: 200px;
+    }
+
+    h1 {
+        font-size: 28px;
+    }
+
+    h2 {
+        font-size: 24px;
+    }
+
+    p, ul li {
+        font-size: 14px;
+    }
+}

@@ -6,78 +6,89 @@
     <title>Multimedia de Baloncesto</title>
     <meta name="description" content="Explora imágenes y videos inspiradores de baloncesto.">
     <link rel="icon" href="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRGTS1xtytfr4-ryoyDH6ET5Cn8bvfooVeh2g&s" type="image/x-icon">
+    <link rel="stylesheet" href="multimedia.css">
+    
 </head>
-<body style="font-family: Arial, sans-serif; margin: 0; padding-top: 50px; text-align: center;">
-
-    <!-- Barra de navegación -->
-    <nav style="background-color: #333; padding: 10px; position: fixed; top: 0; left: 0; width: 100%;">
-        <ul style="list-style-type: none; margin: 0; padding: 0;">
-            <li style="display: inline; margin: 15px;"><a href="index.html" style="text-decoration: none; color: white; font-size: 18px;">Inicio</a></li>
-            <li style="display: inline; margin: 15px;"><a href="reglas.html" style="text-decoration: none; color: white; font-size: 18px;">Reglas</a></li>
-            <li style="display: inline; margin: 15px;"><a href="beneficios.html" style="text-decoration: none; color: white; font-size: 18px;">Beneficios</a></li>
-            <li style="display: inline; margin: 15px;"><a href="equipamiento.html" style="text-decoration: none; color: white; font-size: 18px;">Equipamiento</a></li>
-            <li style="display: inline; margin: 15px;"><a href="multimedia.html" style="text-decoration: none; color: white; font-size: 18px;">Multimedia</a></li>
+<body>
+    <nav class="sidebar">  <!-- Define la barra de navegación lateral con la clase sidebar -->
+        <ul>  <!-- Crea una lista desordenada para los elementos del menú -->
+            <li><a href="index.html"><span class="icon">🏠</span><span class="text">Inicio</span></a></li>  <!-- Elemento de menú para la página de inicio con icono y texto -->
+            <li><a href="reglas.html"><span class="icon">📜</span><span class="text">Reglas</span></a></li>  <!-- Enlace a la sección de reglas -->
+            <li><a href="beneficios.html"><span class="icon">💪</span><span class="text">Beneficios</span></a></li>  <!-- Enlace a la sección de beneficios -->
+            <li><a href="equipamiento.html"><span class="icon">🏀</span><span class="text">Equipamiento</span></a></li>  <!-- Enlace a equipamiento -->
+            <li><a href="multimedia.html"><span class="icon">🎥</span><span class="text">Multimedia</span></a></li>  <!-- Enlace a multimedia -->
         </ul>
     </nav>
-
-    <br><br>
-
-    <!-- Contenido principal -->
-    <header>
-        <table width="80%" align="center">
-            <tr>
-                <td align="center">
-                    <h1>Galería Multimedia del Baloncesto</h1>
-                </td>
-            </tr>
-            <tr>
-                <td align="justify">
-                    <p>El baloncesto es un deporte lleno de emoción, velocidad y grandes momentos. A continuación, te comparto algunas imágenes y videos inspiradores que capturan la esencia del juego.</p>
-                </td>
-            </tr>   
-            <tr>
-                <td align="center">
-                    <h2>Imágenes de referencia</h2>
-                    <img src="https://upload.wikimedia.org/wikipedia/commons/7/7a/Basketball.png" alt="Baloncesto" width="300">
-                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTPL1AAlhTmlx5ErINIHQStxZwKppHuMdddbA&s" alt="Aro de baloncesto" width="300">
-                    <img src="https://down-mx.img.susercontent.com/file/sg-11134201-7rcdc-ltdzsgjoxche0d" all="zapatillas" width="300">
-                </td>
-            </tr>
-            <tr>
-                <td align="center">
-                    <h2>Videos Inspiradores</h2>
-                    <div style="display: flex; flex-direction: column; align-items: center; gap: 20px;">
-                        <iframe width="560" height="315" 
-                            src="https://www.youtube.com/embed/UL-HqJ4Bnl0" 
-                            title="Mejores jugadas de baloncesto" 
-                            frameborder="0" 
-                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
-                            allowfullscreen>
-                        </iframe>
-                    
-                        <iframe width="560" height="315" 
-                            src="https://www.youtube.com/embed/NpisZtL3VjY" 
-                            title="Historia del baloncesto" 
-                            frameborder="0" 
-                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
-                            allowfullscreen>
-                        </iframe>
-                    </div>
-                    
-                
-                </td>
-            </tr>
-        </table>
+    
+    <header class="container">
+        <h1>Galería Multimedia del Baloncesto</h1>
+        <p>El baloncesto es un deporte lleno de emoción, velocidad y grandes momentos. A continuación, te comparto algunas imágenes y videos inspiradores que capturan la esencia del juego.</p>
     </header>
 
-    <br>
-    <div style="height: 131px;"></div>
-
-
-    <!-- Pie de página -->
-    <footer style="background-color: #333; color: white; padding: 10px; text-align: center;">
-        <p>Contáctanos en: StivenInfo@hobbybaloncesto.com</p>
-        <p>&copy; 2025 Hobby Baloncesto.</p>
+    <section class="container">
+        <!-- Título de la sección -->
+        <h2>Imágenes de referencia</h2>
+    
+        <!-- Contenedor del carrusel -->
+        <div class="carousel">
+            <!-- Contenedor interno donde estarán las imágenes -->
+            <div class="carousel-inner">
+                <!-- Imagen de un balón de baloncesto -->
+                <img src="https://www.tuttossport.com.co/wp-content/uploads/2024/04/BALONCESTO-SCORE-BY-GOLTY-No.7-NARANJA-2.png" alt="Baloncesto">
+                <!-- Imagen de un aro de baloncesto con una pelota entrando -->
+                <img src="https://png.pngtree.com/png-vector/20240128/ourmid/pngtree-basketball-ball-falling-into-a-basketball-hoop-png-image_11556235.png" alt="Aro de baloncesto">
+                <!-- Imagen de unas zapatillas deportivas -->
+                <img src="https://underarmourcol.vtexassets.com/arquivos/ids/587154/3026634-104_Y81_1.png?v=638576098493730000" alt="Zapatillas">
+            </div>
+            <!-- Botón para navegar a la imagen anterior en el carrusel -->
+            <button class="prev">&#10094;</button>
+            <!-- Botón para navegar a la siguiente imagen en el carrusel -->
+            <button class="next">&#10095;</button>
+        </div>
+    </section>
+    
+    <!-- Sección principal que contiene los videos -->
+    <section class="container">
+        <!-- Título de la sección -->
+        <h2>Videos Inspiradores</h2>
+    
+        <!-- Contenedor de los videos -->
+        <div class="video-container">
+            <!-- Primer video de YouTube incrustado -->
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/UL-HqJ4Bnl0" 
+                    title="Mejores jugadas de baloncesto" frameborder="0" allowfullscreen>
+            </iframe>
+    
+            <!-- Segundo video de YouTube incrustado -->
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/NpisZtL3VjY" 
+                    title="Historia del baloncesto" frameborder="0" allowfullscreen>
+            </iframe>
+        </div>
+    </section>
+    <footer>
+        <p>Contáctanos en: <a href="mailto:StivenInfo@hobbybaloncesto.com">StivenInfo@hobbybaloncesto.com</a></p>
+        <p>&copy; 2025 Hobby Baloncesto. Todos los derechos reservados.</p>
     </footer>
+
+    <script>
+
+    document.addEventListener("DOMContentLoaded", function () {
+    const carouselInner = document.querySelector(".carousel-inner");
+    const images = document.querySelectorAll(".carousel-inner img");
+    let index = 0;
+
+    document.querySelector(".next").addEventListener("click", function () {
+        index = (index + 1) % images.length;
+        carouselInner.style.transform = `translateX(-${index * 100}%)`;
+    });
+
+    document.querySelector(".prev").addEventListener("click", function () {
+        index = (index - 1 + images.length) % images.length;
+        carouselInner.style.transform = `translateX(-${index * 100}%)`;
+    });
+});
+    </script>
+
+
 </body>
 </html>
