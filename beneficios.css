@@ -1,4 +1,4 @@
-/* Variables de colores basadas en Material Theme Builder */
+/* Variables de colores */
 :root {
     --primary-color: #000000;
     --secondary-color: #03dac6;
@@ -10,35 +10,31 @@
 /* Estilos generales */
 body {
     font-family: 'Poppins', sans-serif;
-    margin: 0;
-    padding: 0;
     background-image: url('https://wallpapers.com/images/high/nba-pictures-nt3fu0yabe9rzfr5.webp');
     background-size: cover;
     background-position: center;
-    background-repeat: no-repeat;
     background-attachment: fixed;
     color: var(--text-color);
     line-height: 1.6;
     display: flex;
     flex-direction: column;
-    align-items: center;
     min-height: 100vh;
 }
 
-/* Contenedor principal */
-.content {
-    max-width: 800px;
-    width: 90%;
-    margin: 40px auto;
-    padding: 20px;
-    background-color: rgba(255, 255, 255, 0.9);
-    border-radius: 10px;
-    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+/* Ajustes específicos para Bootstrap */
+a,
+.nav-link,
+.breadcrumb-item a {
+    text-decoration: none !important;
+    color: inherit;
 }
-h1 {
-    font-size: 28px;
-    margin-top: 30px;
-    text-align: center;
+
+.navbar-nav .nav-link:hover {
+    color: var(--accent-color) !important;
+}
+
+.btn {
+    text-decoration: none !important;
 }
 
 /* Barra lateral */
@@ -68,7 +64,7 @@ h1 {
 
 .sidebar ul li {
     padding: 15px;
-    transition: background 0.3s, transform 0.2s;
+    transition: 0.3s, transform 0.2s;
     display: flex;
     align-items: center;
 }
@@ -84,7 +80,7 @@ h1 {
     font-size: 18px;
     display: flex;
     align-items: center;
-    gap: 15px;
+    gap: 10.2px;
     white-space: nowrap;
     padding: 10px;
     width: 100%;
@@ -106,18 +102,67 @@ h1 {
     min-width: 40px;
 }
 
-/* Movimiento en el texto */
-h1, h2, p, ul li {
+h1,
+h2,
+p {
     transition: transform 0.3s ease-out, color 0.3s ease-out;
 }
 
-h1:hover, h2:hover {
+h1:hover,
+h2:hover {
     color: var(--accent-color);
     transform: translateX(10px);
 }
 
-p:hover, ul li:hover {
+p:hover {
     transform: translateX(10px);
+}
+
+/* Contenido principal */
+.custom-content {
+    max-width: 800px;
+    margin: 0 auto;
+    background-color: rgba(255, 255, 255, 0.9);
+    border-radius: 10px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+}
+
+/* Animación para el movimiento de textos */
+@keyframes moveText {
+    0% {
+        transform: translateX(0);
+    }
+
+    50% {
+        transform: translateX(10px);
+    }
+
+    100% {
+        transform: translateX(0);
+    }
+}
+
+/* Aplicar movimiento a todo el contenido */
+.custom-content p,
+.custom-content h1,
+.custom-content h2,
+.custom-content li {
+    transition: transform 0.3s ease-in-out;
+}
+
+.custom-content p:hover,
+.custom-content h1:hover,
+.custom-content h2:hover,
+.custom-content li:hover {
+    animation: moveText 1.5s infinite;
+}
+
+/* Cambio de color solo para títulos */
+.custom-content h1:hover,
+.custom-content h2:hover {
+    color: var(--accent-color);
+    transition: color 0.3s ease-in-out;
 }
 
 /* Pie de página */
@@ -125,28 +170,43 @@ footer {
     text-align: center;
     padding: 20px;
     background: rgba(0, 0, 0, 0.8);
-    color: white; /* Texto del footer en blanco */
+    color: white;
     margin-top: 40px;
     border-radius: 10px;
     width: 100%;
 }
 
 footer a {
-    color: var(--secondary-color); /* Color del enlace (correo electrónico) */
+    color: var(--secondary-color);
     text-decoration: none;
     transition: color 0.3s;
 }
 
-footer a:hover {
-    color: var(--accent-color); /* Cambiar a rojo al pasar el cursor */
-    text-decoration: underline;
-}
-
-/* Clase específica para el correo electrónico */
 footer a.email {
-    color: var(--secondary-color); /* Mantener el color original del correo */
+    color: var(--secondary-color) !important;
+    text-decoration: none;
+    transition: color 0.3s;
 }
 
 footer a.email:hover {
-    color: var(--accent-color); /* Cambiar a rojo al pasar el cursor */
+    color: var(--accent-color) !important;
+    text-decoration: underline;
+}
+
+footer a:hover {
+    text-decoration: underline;
+    color: var(--accent-color);
+}
+
+/* Ajustes específicos para Bootstrap */
+.list-unstyled li {
+    margin-bottom: 0.5rem;
+}
+
+.footer-link {
+    color: var(--secondary-color);
+}
+
+.footer-link:hover {
+    color: var(--accent-color);
 }
