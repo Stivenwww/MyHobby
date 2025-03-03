@@ -1,52 +1,109 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Equipamiento de Baloncesto 2025</title>
-    <meta name="description" content="Descubre el equipamiento esencial y las últimas innovaciones para jugar baloncesto en 2025 según el reglamento de la NBA.">
+    <meta name="description"
+        content="Descubre el equipamiento esencial y las últimas innovaciones para jugar baloncesto en 2025 según el reglamento de la NBA.">
     <link rel="stylesheet" href="styles.css">
-    <link rel="icon" href="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRGTS1xtytfr4-ryoyDH6ET5Cn8bvfooVeh2g&s" type="image/x-icon">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+    <link rel="icon" href="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRGTS1xtytfr4-ryoyDH6ET5Cn8bvfooVeh2g&s"
+        type="image/x-icon">
     <link rel="stylesheet" href="equipamiento.css">
     <style>
-        body { font-family: 'Poppins', sans-serif; }
+        body {
+            font-family: 'Poppins', sans-serif;
+        }
     </style>
-
 </head>
+
 <body>
-    <nav class="sidebar">  <!-- Define la barra de navegación lateral con la clase sidebar -->
-        <ul>  <!-- Crea una lista desordenada para los elementos del menú -->
-            <li><a href="index.html"><span class="icon">🏠</span><span class="text">Inicio</span></a></li>  <!-- Elemento de menú para la página de inicio con icono y texto -->
-            <li><a href="reglas.html"><span class="icon">📜</span><span class="text">Reglas</span></a></li>  <!-- Enlace a la sección de reglas -->
-            <li><a href="beneficios.html"><span class="icon">💪</span><span class="text">Beneficios</span></a></li>  <!-- Enlace a la sección de beneficios -->
-            <li><a href="equipamiento.html"><span class="icon">🏀</span><span class="text">Equipamiento</span></a></li>  <!-- Enlace a equipamiento -->
-            <li><a href="multimedia.html"><span class="icon">🎥</span><span class="text">Multimedia</span></a></li>  <!-- Enlace a multimedia -->
+    <!-- Botón menú en móviles -->
+    <button class="btn btn-dark text-white m-3 d-md-none" type="button" data-bs-toggle="offcanvas"
+        data-bs-target="#sidebar" aria-controls="sidebar"> ☰ Menú</button>
+
+    <!-- Barra lateral Offcanvas -->
+    <div class="offcanvas offcanvas-start bg-dark text-white" tabindex="-1" id="sidebar">
+        <div class="offcanvas-header">
+            <h5 class="offcanvas-title">Menú</h5>
+            <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas"
+                aria-label="Cerrar"></button>
+        </div>
+        <div class="offcanvas-body">
+            <ul class="list-unstyled">
+                <li class="p-2"><a href="inicio.html" class="text-white text-decoration-none">🏠 Inicio</a></li>
+                <li class="p-2"><a href="reglas.html" class="text-white text-decoration-none">📜 Reglas</a></li>
+                <li class="p-2"><a href="beneficios.html" class="text-white text-decoration-none">💪 Beneficios</a></li>
+                <li class="p-2"><a href="equipamiento.html" class="text-white text-decoration-none">🏀 Equipamiento</a>
+                </li>
+                <li class="p-2"><a href="multimedia.html" class="text-white text-decoration-none">🎥 Multimedia</a></li>
+                <li class="p-2>"><a href="user.html" class="text-white text-decoration-none">❌​ Cerrar sesion </a></li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- Barra lateral en pantallas grandes -->
+    <nav class="sidebar bg-dark text-white d-none d-md-block position-fixed vh-100 p-3">
+        <ul class="list-unstyled">
+            <li class="p-2"><a href="inicio.html" class="text-white text-decoration-none">🏠 Inicio</a></li>
+            <li class="p-2"><a href="reglas.html" class="text-white text-decoration-none">📜 Reglas</a></li>
+            <li class="p-2"><a href="beneficios.html" class="text-white text-decoration-none">💪 Beneficios</a></li>
+            <li class="p-2"><a href="equipamiento.html" class="text-white text-decoration-none">🏀 Equipamiento</a></li>
+            <li class="p-2"><a href="multimedia.html" class="text-white text-decoration-none">🎥 Multimedia</a></li>
+            <li class="p-2>"><a href="user.html" class="text-white text-decoration-none">❌​ Cerrar sesion </a></li>
         </ul>
     </nav>
 
+
     <div class="content">
-        <h1>Equipamiento Esencial para Jugar Baloncesto en 2025 según el Reglamento de la NBA</h1>
-        <p>El baloncesto sigue evolucionando y en 2025 el equipamiento ha mejorado con nuevas tecnologías que optimizan el rendimiento de los jugadores. Aquí te presentamos lo más actualizado en equipamiento para la práctica de este deporte, siguiendo las regulaciones de la NBA.</p>
-        
-        <h2>Balón de Baloncesto Inteligente</h2>
-        <p>Los balones ahora incluyen sensores integrados que analizan la rotación, la velocidad y el ángulo de tiro, proporcionando retroalimentación en tiempo real a través de una app. Según el reglamento de la NBA 2025, estos balones deben cumplir con estándares específicos de peso y tamaño para ser utilizados en partidos oficiales.</p>
-        
-        <h2>Zapatillas con Tecnología Antigravedad</h2>
-        <p>Las zapatillas de 2025 cuentan con suelas que absorben impactos de manera avanzada, reduciendo el estrés en las articulaciones y mejorando la estabilidad al saltar. La NBA ha aprobado estas zapatillas siempre que no excedan ciertos límites de altura en la suela para mantener la equidad en el juego.</p>
-        
-        <h2>Ropa Deportiva con Regulación de Temperatura</h2>
-        <p>Las camisetas y shorts ahora incluyen fibras inteligentes que se adaptan a la temperatura corporal, manteniendo fresco al jugador en climas cálidos y brindando calor en climas fríos. La NBA permite el uso de esta tecnología siempre que no interfiera con la visibilidad de los números y nombres en las camisetas.</p>
-        
-        <h2>Accesorios de Seguridad Mejorados</h2>
-        <ul>
-            <li><strong>Rodilleras inteligentes:</strong> Detectan la presión y ajustan el soporte automáticamente. La NBA requiere que estas rodilleras sean de colores neutros y no distraigan a los jugadores o árbitros.</li>
-            <li><strong>Protectores bucales conectados:</strong> Monitorean la respiración y alertan en caso de impacto fuerte. Estos protectores deben ser aprobados por la NBA para asegurar que no contengan materiales prohibidos.</li>
-            <li><strong>Muñequeras con sensores:</strong> Ayudan a medir la fuerza de los lanzamientos y corrigen la postura de la mano. La NBA permite su uso siempre que no excedan un tamaño específico y no interfieran con el juego.</li>
+        <h1 class="text-center mb-4">Equipamiento Esencial para Jugar Baloncesto en 2025 según el Reglamento de la NBA
+        </h1>
+        <p class="lead">El baloncesto sigue evolucionando y en 2025 el equipamiento ha mejorado con nuevas tecnologías
+            que optimizan el rendimiento de los jugadores. Aquí te presentamos lo más actualizado en equipamiento para
+            la práctica de este deporte, siguiendo las regulaciones de la NBA.</p>
+
+        <h2 class="mt-4 mb-3">Balón de Baloncesto Inteligente</h2>
+        <p>Los balones ahora incluyen sensores integrados que analizan la rotación, la velocidad y el ángulo de tiro,
+            proporcionando retroalimentación en tiempo real a través de una app. Según el reglamento de la NBA 2025,
+            estos balones deben cumplir con estándares específicos de peso y tamaño para ser utilizados en partidos
+            oficiales.</p>
+
+        <h2 class="mt-4 mb-3">Zapatillas con Tecnología Antigravedad</h2>
+        <p>Las zapatillas de 2025 cuentan con suelas que absorben impactos de manera avanzada, reduciendo el estrés en
+            las articulaciones y mejorando la estabilidad al saltar. La NBA ha aprobado estas zapatillas siempre que no
+            excedan ciertos límites de altura en la suela para mantener la equidad en el juego.</p>
+
+        <h2 class="mt-4 mb-3">Ropa Deportiva con Regulación de Temperatura</h2>
+        <p>Las camisetas y shorts ahora incluyen fibras inteligentes que se adaptan a la temperatura corporal,
+            manteniendo fresco al jugador en climas cálidos y brindando calor en climas fríos. La NBA permite el uso de
+            esta tecnología siempre que no interfiera con la visibilidad de los números y nombres en las camisetas.</p>
+
+        <h2 class="mt-4 mb-3">Accesorios de Seguridad Mejorados</h2>
+        <ul class="list-unstyled mb-4">
+            <li><strong>Rodilleras inteligentes:</strong> Detectan la presión y ajustan el soporte automáticamente. La
+                NBA requiere que estas rodilleras sean de colores neutros y no distraigan a los jugadores o árbitros.
+            </li>
+            <li><strong>Protectores bucales conectados:</strong> Monitorean la respiración y alertan en caso de impacto
+                fuerte. Estos protectores deben ser aprobados por la NBA para asegurar que no contengan materiales
+                prohibidos.</li>
+            <li><strong>Muñequeras con sensores:</strong> Ayudan a medir la fuerza de los lanzamientos y corrigen la
+                postura de la mano. La NBA permite su uso siempre que no excedan un tamaño específico y no interfieran
+                con el juego.</li>
         </ul>
     </div>
-    <footer>
-        <p>Contáctanos en: <a href="mailto:StivenInfo@hobbybaloncesto.com">StivenInfo@hobbybaloncesto.com</a></p>
+
+    <!-- Pie de página -->
+    <footer class="text-center py-4 bg-dark text-white mt-auto">
+        <p>Contáctanos en: <a href="mailto:StivenInfo@hobbybaloncesto.com"
+                class="email">StivenInfo@hobbybaloncesto.com</a></p>
         <p>&copy; 2025 Hobby Baloncesto. Todos los derechos reservados.</p>
     </footer>
+
+    <!-- Bootstrap JS y dependencias -->
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.min.js"></script>
 </body>
+
 </html>
