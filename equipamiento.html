@@ -16,89 +16,80 @@
         body {
             font-family: 'Poppins', sans-serif;
         }
+        .content {
+            margin-left: 250px; /* Espacio para el sidebar en pantallas grandes */
+            padding: 20px;
+            max-width: 100%;
+            overflow-y: auto;
+            height: 100vh;
+        }
+        @media (max-width: 768px) {
+            .content {
+                margin-left: 0;
+            }
+        }
     </style>
 </head>
 
 <body>
-        <!-- Botón menú en móviles -->
+    <!-- Botón menú en móviles -->
     <button class="btn btn-dark text-white m-3 d-md-none" type="button" data-bs-toggle="offcanvas"
-    data-bs-target="#sidebar" aria-controls="sidebar">
-    ☰ Menú
-</button>
+        data-bs-target="#sidebar" aria-controls="sidebar">
+        ☰ Menú
+    </button>
 
-<!-- Menú lateral Offcanvas para móviles -->
-<div class="offcanvas offcanvas-start bg-dark text-white" tabindex="-1" id="sidebar">
-    <div class="offcanvas-header">
-        <h5 class="offcanvas-title">Menú</h5>
-        <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas"
-            aria-label="Cerrar"></button>
+    <!-- Menú lateral Offcanvas para móviles -->
+    <div class="offcanvas offcanvas-start bg-dark text-white" tabindex="-1" id="sidebar">
+        <div class="offcanvas-header">
+            <h5 class="offcanvas-title">Menú</h5>
+            <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas"
+                aria-label="Cerrar"></button>
+        </div>
+        <div class="offcanvas-body">
+            <ul class="list-unstyled">
+                <li class="p-2"><a href="inicio.html" class="text-white text-decoration-none">🏠 Inicio</a></li>
+                <li class="p-2"><a href="reglas.html" class="text-white text-decoration-none">📜 Reglas</a></li>
+                <li class="p-2"><a href="beneficios.html" class="text-white text-decoration-none">💪 Beneficios</a></li>
+                <li class="p-2"><a href="equipamiento.html" class="text-white text-decoration-none">🏀 Equipamiento</a></li>
+                <li class="p-2"><a href="multimedia.html" class="text-white text-decoration-none">🎥 Multimedia</a></li>
+                <li class="p-2"><a href="user.html" class="text-white text-decoration-none">❌ Cerrar sesión</a></li>
+            </ul>
+        </div>
     </div>
-    <div class="offcanvas-body">
+
+    <!-- Barra lateral fija para pantallas grandes -->
+    <nav class="sidebar bg-dark text-white d-none d-md-block position-fixed vh-100 p-3">
         <ul class="list-unstyled">
             <li class="p-2"><a href="inicio.html" class="text-white text-decoration-none">🏠 Inicio</a></li>
             <li class="p-2"><a href="reglas.html" class="text-white text-decoration-none">📜 Reglas</a></li>
             <li class="p-2"><a href="beneficios.html" class="text-white text-decoration-none">💪 Beneficios</a></li>
-            <li class="p-2"><a href="equipamiento.html" class="text-white text-decoration-none">🏀 Equipamiento</a>
-            </li>
+            <li class="p-2"><a href="equipamiento.html" class="text-white text-decoration-none">🏀 Equipamiento</a></li>
             <li class="p-2"><a href="multimedia.html" class="text-white text-decoration-none">🎥 Multimedia</a></li>
-            <li class="p-2"><a href="user.html" class="text-white text-decoration-none">❌​ Cerrar sesión</a></li>
+            <li class="p-2"><a href="user.html" class="text-white text-decoration-none">❌ Cerrar sesión</a></li>
         </ul>
-    </div>
-</div>
+    </nav>
 
-<!-- Barra lateral fija para pantallas grandes -->
-<nav class="sidebar bg-dark text-white d-none d-md-block position-fixed vh-100 p-3">
-    <ul class="list-unstyled">
-        <li class="p-2"><a href="inicio.html" class="text-white text-decoration-none">🏠 Inicio</a></li>
-        <li class="p-2"><a href="reglas.html" class="text-white text-decoration-none">📜 Reglas</a></li>
-        <li class="p-2"><a href="beneficios.html" class="text-white text-decoration-none">💪 Beneficios</a></li>
-        <li class="p-2"><a href="equipamiento.html" class="text-white text-decoration-none">🏀 Equipamiento</a></li>
-        <li class="p-2"><a href="multimedia.html" class="text-white text-decoration-none">🎥 Multimedia</a></li>
-        <li class="p-2"><a href="user.html" class="text-white text-decoration-none">❌​ Cerrar sesión</a></li>
-    </ul>
-</nav>
-
-    <div class="content">
-        <h1 class="text-center mb-4">Equipamiento Esencial para Jugar Baloncesto en 2025 según el Reglamento de la NBA
-        </h1>
+    <div class="content overflow-auto">
+        <h1 class="text-center mb-4">Equipamiento Esencial para Jugar Baloncesto en 2025 según el Reglamento de la NBA</h1>
         <p class="lead">El baloncesto sigue evolucionando y en 2025 el equipamiento ha mejorado con nuevas tecnologías
-            que optimizan el rendimiento de los jugadores. Aquí te presentamos lo más actualizado en equipamiento para
-            la práctica de este deporte, siguiendo las regulaciones de la NBA.</p>
-
+            que optimizan el rendimiento de los jugadores.</p>
         <h2 class="mt-4 mb-3">Balón de Baloncesto Inteligente</h2>
-        <p>Los balones ahora incluyen sensores integrados que analizan la rotación, la velocidad y el ángulo de tiro,
-            proporcionando retroalimentación en tiempo real a través de una app. Según el reglamento de la NBA 2025,
-            estos balones deben cumplir con estándares específicos de peso y tamaño para ser utilizados en partidos
-            oficiales.</p>
-
+        <p>Los balones ahora incluyen sensores integrados que analizan la rotación, la velocidad y el ángulo de tiro.</p>
         <h2 class="mt-4 mb-3">Zapatillas con Tecnología Antigravedad</h2>
-        <p>Las zapatillas de 2025 cuentan con suelas que absorben impactos de manera avanzada, reduciendo el estrés en
-            las articulaciones y mejorando la estabilidad al saltar. La NBA ha aprobado estas zapatillas siempre que no
-            excedan ciertos límites de altura en la suela para mantener la equidad en el juego.</p>
-
+        <p>Las zapatillas de 2025 cuentan con suelas que absorben impactos de manera avanzada.</p>
         <h2 class="mt-4 mb-3">Ropa Deportiva con Regulación de Temperatura</h2>
-        <p>Las camisetas y shorts ahora incluyen fibras inteligentes que se adaptan a la temperatura corporal,
-            manteniendo fresco al jugador en climas cálidos y brindando calor en climas fríos. La NBA permite el uso de
-            esta tecnología siempre que no interfiera con la visibilidad de los números y nombres en las camisetas.</p>
-
+        <p>Las camisetas y shorts ahora incluyen fibras inteligentes que se adaptan a la temperatura corporal.</p>
         <h2 class="mt-4 mb-3">Accesorios de Seguridad Mejorados</h2>
         <ul class="list-unstyled mb-4">
-            <li><strong>Rodilleras inteligentes:</strong> Detectan la presión y ajustan el soporte automáticamente. La
-                NBA requiere que estas rodilleras sean de colores neutros y no distraigan a los jugadores o árbitros.
-            </li>
-            <li><strong>Protectores bucales conectados:</strong> Monitorean la respiración y alertan en caso de impacto
-                fuerte. Estos protectores deben ser aprobados por la NBA para asegurar que no contengan materiales
-                prohibidos.</li>
-            <li><strong>Muñequeras con sensores:</strong> Ayudan a medir la fuerza de los lanzamientos y corrigen la
-                postura de la mano. La NBA permite su uso siempre que no excedan un tamaño específico y no interfieran
-                con el juego.</li>
+            <li><strong>Rodilleras inteligentes:</strong> Detectan la presión y ajustan el soporte automáticamente.</li>
+            <li><strong>Protectores bucales conectados:</strong> Monitorean la respiración y alertan en caso de impacto fuerte.</li>
+            <li><strong>Muñequeras con sensores:</strong> Ayudan a medir la fuerza de los lanzamientos.</li>
         </ul>
     </div>
 
     <!-- Pie de página -->
     <footer class="text-center py-4 bg-dark text-white mt-auto">
-        <p>Contáctanos en: <a href="mailto:StivenInfo@hobbybaloncesto.com"
-                class="email">StivenInfo@hobbybaloncesto.com</a></p>
+        <p>Contáctanos en: <a href="mailto:StivenInfo@hobbybaloncesto.com" class="email">StivenInfo@hobbybaloncesto.com</a></p>
         <p>&copy; 2025 Hobby Baloncesto. Todos los derechos reservados.</p>
     </footer>
 
