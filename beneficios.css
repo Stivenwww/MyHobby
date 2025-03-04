@@ -1,0 +1,212 @@
+/* Variables de colores */
+:root {
+    --primary-color: #000000;
+    --secondary-color: #03dac6;
+    --background-color: #eeeeee;
+    --text-color: #010101;
+    --accent-color: #ff0266;
+}
+
+/* Estilos generales */
+body {
+    font-family: 'Poppins', sans-serif;
+    background-image: url('https://wallpapers.com/images/high/nba-pictures-nt3fu0yabe9rzfr5.webp');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    color: var(--text-color);
+    line-height: 1.6;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+/* Ajustes específicos para Bootstrap */
+a,
+.nav-link,
+.breadcrumb-item a {
+    text-decoration: none !important;
+    color: inherit;
+}
+
+.navbar-nav .nav-link:hover {
+    color: var(--accent-color) !important;
+}
+
+.btn {
+    text-decoration: none !important;
+}
+
+/* Barra lateral */
+.sidebar {
+    width: 80px;
+    height: 100vh;
+    background: rgba(0, 0, 0, 0.8);
+    transition: width 0.3s ease-in-out;
+    position: fixed;
+    top: 0;
+    left: 0;
+    overflow: hidden;
+    border-radius: 0 20px 20px 0;
+    box-shadow: 5px 0 15px rgba(0, 0, 0, 0.3);
+    z-index: 1000;
+}
+
+.sidebar:hover {
+    width: 220px;
+}
+
+.sidebar ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.sidebar ul li {
+    padding: 15px;
+    transition: 0.3s, transform 0.2s;
+    display: flex;
+    align-items: center;
+}
+
+.sidebar ul li:hover {
+    background: var(--secondary-color);
+    transform: scale(1.1);
+}
+
+.sidebar ul li a {
+    text-decoration: none;
+    color: white;
+    font-size: 18px;
+    display: flex;
+    align-items: center;
+    gap: 10.2px;
+    white-space: nowrap;
+    padding: 10px;
+    width: 100%;
+}
+
+.sidebar ul li a span.text {
+    opacity: 0;
+    width: 0;
+    transition: opacity 0.3s ease-in-out 0.1s, width 0.3s ease-in-out 0.1s;
+}
+
+.sidebar:hover ul li a span.text {
+    opacity: 1;
+    width: auto;
+}
+
+.sidebar ul li span.icon {
+    font-size: 24px;
+    min-width: 40px;
+}
+
+h1,
+h2,
+p {
+    transition: transform 0.3s ease-out, color 0.3s ease-out;
+}
+
+h1:hover,
+h2:hover {
+    color: var(--accent-color);
+    transform: translateX(10px);
+}
+
+p:hover {
+    transform: translateX(10px);
+}
+
+/* Contenido principal */
+.custom-content {
+    max-width: 800px;
+    margin: 0 auto;
+    background-color: rgba(255, 255, 255, 0.9);
+    border-radius: 10px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+}
+
+/* Animación para el movimiento de textos */
+@keyframes moveText {
+    0% {
+        transform: translateX(0);
+    }
+
+    50% {
+        transform: translateX(10px);
+    }
+
+    100% {
+        transform: translateX(0);
+    }
+}
+
+/* Aplicar movimiento a todo el contenido */
+.custom-content p,
+.custom-content h1,
+.custom-content h2,
+.custom-content li {
+    transition: transform 0.3s ease-in-out;
+}
+
+.custom-content p:hover,
+.custom-content h1:hover,
+.custom-content h2:hover,
+.custom-content li:hover {
+    animation: moveText 1.5s infinite;
+}
+
+/* Cambio de color solo para títulos */
+.custom-content h1:hover,
+.custom-content h2:hover {
+    color: var(--accent-color);
+    transition: color 0.3s ease-in-out;
+}
+
+/* Pie de página */
+footer {
+    text-align: center;
+    padding: 20px;
+    background: rgba(0, 0, 0, 0.8);
+    color: white;
+    margin-top: 40px;
+    border-radius: 10px;
+    width: 100%;
+}
+
+footer a {
+    color: var(--secondary-color);
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+footer a.email {
+    color: var(--secondary-color) !important;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+footer a.email:hover {
+    color: var(--accent-color) !important;
+    text-decoration: underline;
+}
+
+footer a:hover {
+    text-decoration: underline;
+    color: var(--accent-color);
+}
+
+/* Ajustes específicos para Bootstrap */
+.list-unstyled li {
+    margin-bottom: 0.5rem;
+}
+
+.footer-link {
+    color: var(--secondary-color);
+}
+
+.footer-link:hover {
+    color: var(--accent-color);
+}

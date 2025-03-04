@@ -1,0 +1,202 @@
+/* Estilos generales */
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: url('https://wallpapers.com/images/high/basketball-court-background-wlo3crck08bpq5fl.jpg') no-repeat center center/cover;
+    margin: 0;
+    font-family: 'Poppins', sans-serif;
+    overflow: hidden;
+    position: relative;
+}
+
+/* Contenedor principal */
+.container {
+    text-align: center;
+    background: rgba(255, 255, 255, 0.9);
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+    z-index: 2;
+    position: relative;
+    overflow: hidden;
+    animation: bounceIn 1s ease-in-out;
+}
+
+/* Animación de entrada */
+@keyframes bounceIn {
+    0% {
+        transform: scale(0.5);
+        opacity: 0;
+    }
+
+    60% {
+        transform: scale(1.1);
+        opacity: 1;
+    }
+
+    100% {
+        transform: scale(1);
+    }
+}
+
+/* Inputs y botones */
+input,
+button {
+    width: 100%;
+    padding: 12px;
+    margin: 10px 0;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+input {
+    background: rgba(0, 0, 0, 0.1);
+    color: #333;
+    font-weight: bold;
+}
+
+button {
+    background: #ff9800;
+    color: white;
+    cursor: pointer;
+    font-weight: bold;
+    transition: transform 0.3s ease-in-out;
+}
+
+button:hover {
+    background: #e65100;
+    transform: scale(1.05);
+}
+
+/* Efecto de rebote al hacer clic en el botón */
+button:active {
+    transform: scale(0.9);
+}
+
+/* Animación de la pelota */
+.basketball {
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    background: url('https://cdn-icons-png.flaticon.com/512/103/103074.png') no-repeat center center/cover;
+    bottom: -60px;
+    left: 50%;
+    transform: translateX(-50%);
+    animation: ballBounce 2s infinite;
+}
+
+@keyframes ballBounce {
+
+    0%,
+    100% {
+        bottom: -60px;
+    }
+
+    50% {
+        bottom: 20px;
+    }
+}
+
+/* Mensajes */
+.error-message {
+    color: red;
+    font-size: 14px;
+    margin-top: 10px;
+}
+
+.message {
+    color: green;
+    font-size: 14px;
+    margin-top: 10px;
+}
+
+/* Estilos de la tabla */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+    background: rgba(255, 255, 255, 0.8);
+    border-radius: 5px;
+    overflow: hidden;
+}
+
+th,
+td {
+    padding: 12px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+}
+
+th {
+    background-color: #ff9800;
+    color: white;
+}
+
+tr:nth-child(even) {
+    background-color: #f9f9f9;
+}
+
+tr:hover {
+    background-color: #f1f1f1;
+}
+
+/* Botones en la tabla */
+.edit-btn {
+    background-color: #4caf50;
+    color: white;
+    border: none;
+    padding: 8px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.edit-btn:hover {
+    background-color: #388e3c;
+}
+
+.delete-btn {
+    background-color: #d32f2f;
+    color: white;
+    border: none;
+    padding: 8px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.delete-btn:hover {
+    background-color: #b71c1c;
+}
+
+/* Barra de progreso */
+.progress-bar-container {
+    width: 100%;
+    background-color: #ddd;
+    border-radius: 5px;
+    overflow: hidden;
+    margin: 10px 0;
+}
+
+.progress-bar {
+    height: 20px;
+    width: 0%;
+    background-color: #4caf50;
+    text-align: center;
+    color: white;
+    line-height: 20px;
+    transition: width 0.5s;
+}
+
+/* Botón de cierre de sesión */
+.logout-btn {
+    background-color: #ff4757;
+    margin-top: 20px;
+}
+
+.logout-btn:hover {
+    background-color: #e84118;
+}
+
+/* Estilos de la pelota de baloncesto */
