@@ -1,157 +1,55 @@
 <!DOCTYPE html>
 <html lang="es">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Reglas del Baloncesto</title>
-    <meta name="description"
-        content="Conoce todas las reglas actuales del baloncesto, incluyendo duración del juego, faltas, violaciones y puntuación.">
-    <link rel="icon" href="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRGTS1xtytfr4-ryoyDH6ET5Cn8bvfooVeh2g&s"
-        type="image/x-icon">
-
-    <!-- Bootstrap CSS -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="reglas.css">
-    <style>
-        body {
-            font-family: 'Poppins', sans-serif;
-        }
-    </style>
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+    <script src="https://kit.fontawesome.com/tu-clave.js" crossorigin="anonymous"></script>
 </head>
-
 <body>
-    <!-- Botón menú en móviles -->
-    <button class="btn btn-dark text-white m-3 d-md-none" type="button" data-bs-toggle="offcanvas"
-        data-bs-target="#sidebar" aria-controls="sidebar"> ☰ Menú</button>
-
-    <!-- Barra lateral Offcanvas -->
-    <div class="offcanvas offcanvas-start bg-dark text-white" tabindex="-1" id="sidebar">
+    <!-- Barra de navegación -->
+    <nav class="navbar navbar-dark bg-dark">
+        <div class="container-fluid">
+            <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasExample" aria-controls="offcanvasExample">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+        </div>
+    </nav>
+    
+    <!-- Menú lateral -->
+    <div class="offcanvas offcanvas-start bg-dark text-white" tabindex="-1" id="offcanvasExample">
         <div class="offcanvas-header">
             <h5 class="offcanvas-title">Menú</h5>
-            <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas"
-                aria-label="Cerrar"></button>
+            <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas"></button>
         </div>
         <div class="offcanvas-body">
             <ul class="list-unstyled">
-                <li class="p-2"><a href="index.html" class="text-white text-decoration-none">🏠 <bx></bx>Inicio</a></li>
-                <li class="p-2"><a href="reglas.html" class="text-white text-decoration-none">📜 <bx></bx>Reglas</a>
-                </li>
-                <li class="p-2"><a href="beneficios.html" class="text-white text-decoration-none">💪 <bx></bx>
-                        Beneficios</a></li>
-                <li class="p-2"><a href="equipamiento.html" class="text-white text-decoration-none">🏀<bx></bx>
-                        Equipamiento</a></li>
-                <li class="p-2"><a href="multimedia.html" class="text-white text-decoration-none">🎥 <bx></bx>
-                        Multimedia</a></li>
+                <li class="p-2"><a href="index.html" class="text-white text-decoration-none"><i class="fas fa-home me-2"></i> Inicio</a></li>
+                <li class="p-2"><a href="reglas.html" class="text-white text-decoration-none"><i class="fas fa-book me-2"></i> Reglas del Baloncesto</a></li>
+                <li class="p-2"><a href="favoritos.html" class="text-white text-decoration-none"><i class="fas fa-heart me-2"></i> Favoritos</a></li>
+                <li class="p-2"><a href="jugadas.html" class="text-white text-decoration-none"><i class="fas fa-basketball-ball me-2"></i> Jugadas</a></li>
+                <li class="p-2"><a href="videos.html" class="text-white text-decoration-none"><i class="fas fa-video me-2"></i> Videos</a></li>
+                <li class="p-2"><a href="user.html" class="text-white text-decoration-none">❌ Cerrar sesión</a></li>
             </ul>
         </div>
     </div>
-
-    <!-- Barra lateral permanente para pantallas grandes -->
-    <nav class="sidebar bg-dark text-white d-none d-md-block position-fixed vh-100 p-3">
-        <!-- Lista de navegación (igual que en el menú móvil) -->
-        <ul class="list-unstyled">
-            <li class="p-2"><a href="inicio.html" class="text-white text-decoration-none">🏠 Inicio</a></li>
-            <li class="p-2"><a href="reglas.html" class="text-white text-decoration-none">📜 Reglas</a></li>
-            <li class="p-2"><a href="beneficios.html" class="text-white text-decoration-none">💪 Beneficios</a></li>
-            <li class="p-2"><a href="equipamiento.html" class="text-white text-decoration-none">🏀 Equipamiento</a></li>
-            <li class="p-2"><a href="multimedia.html" class="text-white text-decoration-none">🎥 Multimedia</a></li>
-            <li class="p-2>"><a href="user.html" class="text-white text-decoration-none">❌​ Cerrar sesion </a></li>
-        </ul>
-    </nav>
-
+    
     <!-- Contenido principal -->
-    <main class="flex-grow-1 ms-5 ps-5">
-        <div class="container mt-4 bg-white p-4 rounded shadow text-dark">
-            <h1 class="text-center mb-4">Reglas del Baloncesto</h1>
-            <p>El baloncesto es un deporte con un conjunto de reglas detalladas que garantizan un juego justo y
-                emocionante.</p>
-
-            <!-- Duración del Juego -->
-            <h2><i class="fas fa-clock me-2"></i>Duración del Juego</h2>
-            <ul class="list-unstyled">
-                <li><i class="fas fa-basketball-ball me-2"></i><strong>⏳ Partidos NBA:</strong> 4 cuartos de 12 minutos.
-                </li>
-                <li><i class="fas fa-basketball-ball me-2"></i><strong>⏳ Partidos FIBA:</strong> 4 cuartos de 10
-                    minutos.</li>
-                <li><i class="fas fa-stopwatch me-2"></i><strong>⏳ Descanso de medio tiempo:</strong> 15 minutos.</li>
-                <li><i class="fas fa-hourglass-half me-2"></i><strong>⏳ Prórrogas:</strong> 5 minutos en caso de empate.
-                </li>
-            </ul>
-
-            <!-- Jugadores y Sustituciones -->
-            <h2 class="mt-4"><i class="fas fa-users me-2"></i>Jugadores y Sustituciones</h2>
-            <ul class="list-unstyled">
-                <li><i class="fas fa-user me-2"></i><strong>⛹️‍♂️ Jugadores en cancha:</strong> 5 por equipo.</li>
-                <li><i class="fas fa-user-friends me-2"></i><strong>⛹️‍♂️ Suplentes:</strong> Hasta 7 jugadores.</li>
-                <li><i class="fas fa-exchange-alt me-2"></i><strong>⛹️‍♂️ Sustituciones:</strong> Ilimitadas con el
-                    juego detenido.</li>
-            </ul>
-
-            <!-- Puntuación -->
-            <h2 class="mt-4"><i class="fas fa-bullseye me-2"></i>Puntuación</h2>
-            <ul class="list-unstyled">
-                <li><i class="fas fa-basketball-ball me-2"></i><strong>🏀 2 puntos:</strong> Tiros dentro del arco de
-                    tres puntos.</li>
-                <li><i class="fas fa-basketball-ball me-2"></i><strong>🏀 3 puntos:</strong> Tiros fuera del arco de
-                    tres puntos.</li>
-                <li><i class="fas fa-basketball-ball me-2"></i><strong>🏀 1 punto:</strong> Tiros libres después de una
-                    falta.</li>
-            </ul>
-
-            <!-- Faltas y violaciones -->
-            <h2 class="mt-4"><i class="fas fa-exclamation-triangle me-2"></i>Faltas y Violaciones</h2>
-            <ul class="list-unstyled">
-                <li><i class="fas fa-stopwatch me-2"></i><strong>🚨 Falta personal:</strong> Contacto ilegal con un
-                    oponente.</li>
-                <li><i class="fas fa-stopwatch me-2"></i><strong>🚨 Falta técnica:</strong> Conducta antideportiva o
-                    violación de reglas.</li>
-                <li><i class="fas fa-stopwatch me-2"></i><strong>🚨 Falta flagrante:</strong> Contacto excesivo o
-                    peligroso.</li>
-                <li><i class="fas fa-stopwatch me-2"></i><strong>⏳ Regla de los 3 segundos:</strong> Un jugador no puede
-                    permanecer más de 3 segundos en la zona restringida del equipo contrario.</li>
-                <li><i class="fas fa-stopwatch me-2"></i><strong>⏳ Regla de los 8 segundos:</strong> El equipo con
-                    posesión debe cruzar el medio campo en 8 segundos.</li>
-                <li><i class="fas fa-stopwatch me-2"></i><strong>⏳ Regla de los 24 segundos:</strong> Un equipo debe
-                    realizar un tiro a canasta en 24 segundos.</li>
-                <li><i class="fas fa-stopwatch me-2"></i><strong>⏳ Regla de los 5 segundos:</strong> Un jugador con el
-                    balón no puede retenerlo más de 5 segundos sin pasar, driblar o lanzar.</li>
-                <li><i class="fas fa-stopwatch me-2"></i><strong>🚨 Doble drible:</strong> Un jugador no puede driblar,
-                    detenerse y luego volver a driblar.</li>
-                <li><i class="fas fa-stopwatch me-2"></i><strong>🚨 Pasos:</strong> Moverse con el balón sin driblar es
-                    una violación.</li>
-                <li><i class="fas fa-stopwatch me-2"></i><strong>🚨 Interferencia de balón:</strong> Tocar el balón
-                    mientras está descendiendo hacia la canasta es ilegal.</li>
-            </ul>
-
-            <!-- Reglas Específicas de la NBA -->
-            <h2 class="mt-4"><i class="fas fa-book me-2"></i>Reglas Específicas de la NBA</h2>
-            <ul class="list-unstyled">
-                <li><i class="fas fa-stopwatch me-2"></i><strong>⏳🏀 Tiempo de posesión:</strong> 24 segundos para
-                    lanzar a canasta.</li>
-                <li><i class="fas fa-stopwatch me-2"></i><strong>⏳ Regla de los 8 segundos:</strong> El equipo ofensivo
-                    debe cruzar la mitad de la cancha en 8 segundos.</li>
-                <li><i class="fas fa-stopwatch me-2"></i><strong>⏳ Regla de los 3 segundos:</strong> Un jugador ofensivo
-                    no puede permanecer más de 3 segundos en la zona restringida.</li>
-                <li><i class="fas fa-stopwatch me-2"></i><strong>⏳ Regla de los 5 segundos:</strong> Un jugador no puede
-                    retener el balón más de 5 segundos sin driblar, pasar o lanzar.</li>
-                <li><i class="fas fa-exclamation-triangle me-2"></i><strong>🚨 Faltas personales:</strong> Un jugador
-                    queda fuera tras acumular 6 faltas personales.</li>
-                <li><i class="fas fa-exclamation-circle me-2"></i><strong>🚨 Faltas en equipo:</strong> A partir de la
-                    5.ª falta en un cuarto, el equipo rival recibe tiros libres.</li>
-            </ul>
-        </div>
-    </main>
-
-    <!-- Pie de página -->
-    <footer class="text-center py-4 bg-dark text-white mt-auto">
-        <p>Contáctanos en: <a href="mailto:StivenInfo@hobbybaloncesto.com">StivenInfo@hobbybaloncesto.com</a></p>
-        <p>&copy; 2025 Hobby Baloncesto. Todos los derechos reservados.</p>
-    </footer>
-
-    <!-- Bootstrap JS y dependencias -->
-    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.min.js"></script>
+    <div class="container mt-4">
+        <h2 class="text-center">Reglas del Baloncesto</h2>
+        <p class="lead">Conoce las reglas esenciales del baloncesto y cómo aplicarlas en el juego.</p>
+        <ul>
+            <li>Duración del partido: Cuatro cuartos de 10 minutos (FIBA) o 12 minutos (NBA).</li>
+            <li>Regla de los 24 segundos: El equipo tiene 24 segundos para lanzar al aro.</li>
+            <li>Violaciones comunes: Dobles, pasos, fuera de juego.</li>
+            <li>Faltas personales y técnicas.</li>
+            <li>Zona restringida y tiros libres.</li>
+        </ul>
+    </div>
+    
+    <!-- Scripts de Bootstrap -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 </body>
-
 </html>
