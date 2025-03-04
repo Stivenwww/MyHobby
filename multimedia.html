@@ -26,24 +26,43 @@
 </head>
 
 <body>
-    <button class="btn btn-dark d-md-none position-fixed top-0 start-0 m-3" id="menu-toggle">☰</button>
+     <!-- Botón menú en móviles -->
+     <button class="btn btn-dark text-white m-3 d-md-none" type="button" data-bs-toggle="offcanvas"
+     data-bs-target="#sidebar" aria-controls="sidebar">
+     ☰ Menú
+ </button>
 
-    <!-- Menú lateral -->
-    <nav class="sidebar bg-dark text-white position-fixed vh-100 p-3 d-none d-md-block" id="sidebar">
-        <ul class="list-unstyled">
-            <li class="p-2"><a href="inicio.html" class="text-white text-decoration-none">🏠 Inicio</a></li>
-            <li class="p-2"><a href="reglas.html" class="text-white text-decoration-none">📜 Reglas</a></li>
-            <li class="p-2"><a href="beneficios.html" class="text-white text-decoration-none">💪 Beneficios</a></li>
-            <li class="p-2"><a href="equipamiento.html" class="text-white text-decoration-none">🏀 Equipamiento</a></li>
-            <li class="p-2"><a href="multimedia.html" class="text-white text-decoration-none">🎥 Multimedia</a></li>
-            <li class="p-2"><a href="user.html" class="text-white text-decoration-none">❌ Cerrar sesión</a></li>
-        </ul>
-    </nav>
+ <!-- Menú lateral Offcanvas para móviles -->
+ <div class="offcanvas offcanvas-start bg-dark text-white" tabindex="-1" id="sidebar">
+     <div class="offcanvas-header">
+         <h5 class="offcanvas-title">Menú</h5>
+         <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas"
+             aria-label="Cerrar"></button>
+     </div>
+     <div class="offcanvas-body">
+         <ul class="list-unstyled">
+             <li class="p-2"><a href="inicio.html" class="text-white text-decoration-none">🏠 Inicio</a></li>
+             <li class="p-2"><a href="reglas.html" class="text-white text-decoration-none">📜 Reglas</a></li>
+             <li class="p-2"><a href="beneficios.html" class="text-white text-decoration-none">💪 Beneficios</a></li>
+             <li class="p-2"><a href="equipamiento.html" class="text-white text-decoration-none">🏀 Equipamiento</a>
+             </li>
+             <li class="p-2"><a href="multimedia.html" class="text-white text-decoration-none">🎥 Multimedia</a></li>
+             <li class="p-2>"><a href="user.html" class="text-white text-decoration-none">❌​ Cerrar sesion </a></li>
+         </ul>
+     </div>
+ </div>
 
-    <!-- Botón de cerrar sesión en móviles -->
-    <div class="text-center mt-3 d-md-none">
-        <a href="user.html" class="btn btn-danger">❌ Cerrar sesión</a>
-    </div>
+ <!-- Barra lateral fija para pantallas grandes -->
+ <nav class="sidebar bg-dark text-white d-none d-md-block position-fixed vh-100 p-3">
+     <ul class="list-unstyled">
+         <li class="p-2"><a href="inicio.html" class="text-white text-decoration-none">🏠 Inicio</a></li>
+         <li class="p-2"><a href="reglas.html" class="text-white text-decoration-none">📜 Reglas</a></li>
+         <li class="p-2"><a href="beneficios.html" class="text-white text-decoration-none">💪 Beneficios</a></li>
+         <li class="p-2"><a href="equipamiento.html" class="text-white text-decoration-none">🏀 Equipamiento</a></li>
+         <li class="p-2"><a href="multimedia.html" class="text-white text-decoration-none">🎥 Multimedia</a></li>
+         <li class="p-2>"><a href="user.html" class="text-white text-decoration-none">❌​ Cerrar sesion </a></li>
+     </ul>
+ </nav>
     <div class="container mt-5">
         <h1 class="text-center">Galería Multimedia del Baloncesto</h1>
         <p class="text-center">El baloncesto es un deporte lleno de emoción, velocidad y grandes momentos.</p>
@@ -89,4 +108,5 @@
 </body>
 
 </html>
+
 
