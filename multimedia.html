@@ -26,7 +26,10 @@
 </head>
 
 <body>
-    <nav class="sidebar bg-dark text-white d-none d-md-block position-fixed vh-100 p-3">
+    <button class="btn btn-dark d-md-none position-fixed top-0 start-0 m-3" id="menu-toggle">☰</button>
+
+    <!-- Menú lateral -->
+    <nav class="sidebar bg-dark text-white position-fixed vh-100 p-3 d-none d-md-block" id="sidebar">
         <ul class="list-unstyled">
             <li class="p-2"><a href="inicio.html" class="text-white text-decoration-none">🏠 Inicio</a></li>
             <li class="p-2"><a href="reglas.html" class="text-white text-decoration-none">📜 Reglas</a></li>
@@ -37,6 +40,10 @@
         </ul>
     </nav>
 
+    <!-- Botón de cerrar sesión en móviles -->
+    <div class="text-center mt-3 d-md-none">
+        <a href="user.html" class="btn btn-danger">❌ Cerrar sesión</a>
+    </div>
     <div class="container mt-5">
         <h1 class="text-center">Galería Multimedia del Baloncesto</h1>
         <p class="text-center">El baloncesto es un deporte lleno de emoción, velocidad y grandes momentos.</p>
